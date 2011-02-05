@@ -1,5 +1,6 @@
 from django import template
 from html_blocks.models import *
+from django.utils.translation import ugettext as _
 
 register = template.Library()
 
