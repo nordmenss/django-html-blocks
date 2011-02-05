@@ -4,7 +4,7 @@ from html_blocks.models import *
 register = template.Library()
 
 @register.simple_tag
-def block(block_position):
+def html(block_position):
     try:
         block=html_block.objects.get(position=block_position)
         return block.content
