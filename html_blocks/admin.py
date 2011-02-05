@@ -1,10 +1,11 @@
 from django.conf import settings
 from django.contrib import admin
+from html_blocks.models import *
 
 if 'modeltranslation' in (settings.INSTALLED_APPS):
     from modeltranslation.admin import TranslationAdmin
 
-    class html_block_Admin(TranslationAdmin):
+    class html_block_admin(TranslationAdmin):
         list_display = ('title','position',)
         class Media:
             js = (
@@ -17,7 +18,7 @@ if 'modeltranslation' in (settings.INSTALLED_APPS):
             }
 else:
     from django.contrib import admin
-    class html_block_Admin(admin.ModelAdmin):
+    class html_block_admin(admin.ModelAdmin):
         list_display = ('title','position',)
 
-admin.site.register(html_block, html_block_Admin)
+admin.site.register(html_block, html_block_admin)
