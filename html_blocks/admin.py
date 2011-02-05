@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib import admin
 
 if 'modeltranslation' in (settings.INSTALLED_APPS):
     from modeltranslation.admin import TranslationAdmin
