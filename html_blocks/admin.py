@@ -1,4 +1,4 @@
-if modeltranslation in (settings.INSTALLED_APPS):
+if 'modeltranslation' in (settings.INSTALLED_APPS):
     from modeltranslation.admin import TranslationAdmin
 
     class html_block_Admin(TranslationAdmin):
