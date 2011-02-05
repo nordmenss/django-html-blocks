@@ -10,7 +10,7 @@ setup(name=path,
       author='NORD',
       author_email='nordmenss@gmail.com',
       url='https://github.com/nordmenss/django-html-blocks',
-      packages=[ path, ],
+      packages=[ path,path+".templatetags" ],
 
       classifiers=(
           'Development Status :: 2 - Pre-Alpha',
