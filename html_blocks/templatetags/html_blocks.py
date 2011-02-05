@@ -8,5 +8,5 @@ def html_block(block_position):
     try:
         block=html_block.objects.get(position=block_position)
         return block.content
-    except Module.DoesNotExist:
+    except html_block.DoesNotExist:
         return block_position+" "+_("module_not_found")
