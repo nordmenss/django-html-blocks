@@ -7,6 +7,9 @@ if 'modeltranslation' in (settings.INSTALLED_APPS):
 
     class html_block_admin(TranslationAdmin):
         list_display = ('title','position',)
+        formfield_overrides = {
+           RichTextField:{"widget":CKEditorWidget(config_name='introtext')},
+        }
         class Media:
             js = (
                 settings.MEDIA_URL+'js/admin/force_jquery.js',

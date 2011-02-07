@@ -10,4 +10,4 @@ def html(block_position):
         block=html_block.objects.get(position=block_position)
         return block.content
     except html_block.DoesNotExist:
-        return block_position+" "+_("module_not_found")
+        return block_position+" "+_("html block not found")
