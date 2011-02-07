@@ -9,7 +9,7 @@ if 'modeltranslation' in (settings.INSTALLED_APPS):
     class html_block_admin(TranslationAdmin):
         list_display = ('title','position',)
         formfield_overrides = {
-           RichTextField:{"widget":CKEditorWidget(config_name='introtext')},
+           RichTextField:{"widget":CKEditorWidget(config_name='default')},
         }
         class Media:
             js = (
