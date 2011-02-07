@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib import admin
 from html_blocks.models import *
+from ckeditor_widget.widgets import *
 
 if 'modeltranslation' in (settings.INSTALLED_APPS):
     from modeltranslation.admin import TranslationAdmin
