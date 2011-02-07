@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib import admin
 from html_blocks.models import *
+from ckeditor.fields import RichTextField
 from ckeditor_widget.widgets import *
 
 if 'modeltranslation' in (settings.INSTALLED_APPS):
@@ -24,5 +25,8 @@ else:
     from django.contrib import admin
     class html_block_admin(admin.ModelAdmin):
         list_display = ('title','position',)
+        formfield_overrides = {
+           RichTextField:{"widget":CKEditorWidget(config_name='default')},
+        }
 
 admin.site.register(html_block, html_block_admin)
